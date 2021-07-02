@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Track Your Movie Ratings!</h1>
+        <form>
+            <label>
+                Name:
+                <input required type="text" minlength="2" placeholder="Movie" id="name">
+            </label>
+            <label>
+                Rating (0-10):
+                <input required type="number" min="0" max="10" placeholder="5" id="rating">
+            </label>
+            <input type="submit" value="Enter">
+        </form>
+    </header>
+    <main>
+        <section id="sort">
+            <h2>Sort your records</h2>
+            <div class="alpha">
+                <p>Alphabetically (Name)</p>
+                <button class="up" type="button">Ascending</button>
+                <button class="down" type="button">Descending</button>
+            </div>
+            <div class="numer">
+                <p>Numerically (Rating)</p>
+                <button class="up" type="button">Ascending</button>
+                <button class="down" type="button">Descending</button>
+            </div>
+        </section>
+        <section id="records"></section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./movies.js"></script>
+</body>
+</html>
